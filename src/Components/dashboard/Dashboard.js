@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import Board from "../Board/Board"
-//import Board from "./Components/Board/Board";
-
-import "./Style.css";
-import Editable from "../Editabled/Editable";
+import Board from '../Board/Board';
+import Editable from '../Editabled/Editable'
 import Header from "../header/Header";
 import Navbar from "../navbar/Navbar";
+import "./Style.css";
 
-//import Editable from "./Components/Editabled/Editable";
 
 function Dashboard() {
   const [boards, setBoards] = useState(
@@ -126,12 +123,13 @@ function Dashboard() {
   }, [boards]);
 
   return (
-    <div >
+    <div className="app">
     <Header />
     <div style={{ display: "flex", flexDirection: "row" }}>
     <div>
-        <Navbar />
+    <Navbar />
     </div>
+    
       
       <div className="app_boards_container">
         <div className="app_boards">

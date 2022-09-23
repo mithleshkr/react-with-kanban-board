@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { CheckSquare, Clock, MoreHorizontal } from "react-feather";
+import { CheckSquare, Clock, MoreHorizontal, } from "react-feather";
 
 import Dropdown from "../Dropdown/Dropdown";
 
 import "./Card.css";
 import CardInfo from "./CardInfo/CardInfo";
+
+
 
 function Card(props) {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -75,7 +77,7 @@ function Card(props) {
                 class="board_dropdown"
                 onClose={() => setShowDropdown(false)}
               >
-                <p onClick={() => props.removeCard(props.boardId, id)}>
+                <p onClick={() => props.removeCard(props.boardId, id)} style={{color:"red"}}>
                   Delete Card
                 </p>
               </Dropdown>
