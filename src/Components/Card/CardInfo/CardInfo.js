@@ -155,7 +155,7 @@ function CardInfo(props) {
           />
         </div>
 
-        {/* <div className="cardinfo_box">
+         <div className="cardinfo_box">
           <div className="cardinfo_box_title">
             <Tag />
             <p>Labels</p>
@@ -188,7 +188,7 @@ function CardInfo(props) {
               addLabel({ color: selectedColor, text: value })
             }
           />
-          </div> */}
+          </div> 
 
         <div className="cardinfo_box">
           <div className="cardinfo_box_title">

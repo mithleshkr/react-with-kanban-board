@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { CheckSquare, Clock, MoreHorizontal, } from "react-feather";
+import { CheckSquare, Clock, MoreHorizontal } from "react-feather";
 
 import Dropdown from "../Dropdown/Dropdown";
-
+import DeleteIcon from '@mui/icons-material/Delete';
 import "./Card.css";
 import CardInfo from "./CardInfo/CardInfo";
 
@@ -71,8 +71,11 @@ function Card(props) {
               setShowDropdown(true);
             }}
           >
-            <MoreHorizontal />
-            {showDropdown && (
+          <DeleteIcon
+          onClick={() => props.removeCard(props.boardId, id)} style={{color:"red"}}
+          />
+             {/* <MoreHorizontal /> */}
+           {/*  {showDropdown && (
               <Dropdown
                 class="board_dropdown"
                 onClose={() => setShowDropdown(false)}
@@ -81,7 +84,7 @@ function Card(props) {
                   Delete Card
                 </p>
               </Dropdown>
-            )}
+           )} */}
           </div>
         </div>
         <div className="card_title">{title}</div>

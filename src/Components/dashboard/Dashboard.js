@@ -9,7 +9,7 @@ import "./Style.css";
 
 function Dashboard() {
   const [boards, setBoards] = useState(
-    JSON.parse(localStorage.getItem("prac-kanban")) || []
+    JSON.parse(localStorage.getItem("id")) || []
   );
 
   const [targetCard, setTargetCard] = useState({
@@ -119,7 +119,7 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    localStorage.setItem("prac-kanban", JSON.stringify(boards));
+    localStorage.setItem("id", JSON.stringify(boards));
   }, [boards]);
 
   return (

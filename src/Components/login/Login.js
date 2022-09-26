@@ -16,7 +16,7 @@ const Login = () => {
              console.log("Received values of form: ", values);
            };
   return (
-    <div style={{height:"100vh"}}>
+    <div style={{height:"100vh",backgroundColor:"gray"}}>
       <card style={{position:"absolute",top:"38%",left:"42%",height:"42vh"}}>
       <Form
         name="normal_login"
@@ -72,6 +72,7 @@ const Login = () => {
 
         <Form.Item>
           <Button
+          disabled= {!email + !password}
             type="primary"
             htmlType="submit"
             className="login-form-button"
