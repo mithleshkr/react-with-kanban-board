@@ -1,4 +1,94 @@
-.custom-scroll::-webkit-scrollbar {
+
+
+
+
+
+.layout__wrapper {
+  
+  border-radius: 3px;
+  box-shadow: 0 12px 16px rgba(0, 0, 0, .25);
+  width: 100%;
+  height: 89vh;
+  overflow: auto;
+  
+}
+
+.app-bar {
+  
+  border-radius: 3px;
+}
+
+.app-bar__title {
+  color: var(--color-on-background);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+}
+
+.list {
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  min-height: 1.5rem;
+  padding: 0;
+  position: relative;
+}
+
+.list__item {
+}
+
+.card {
+  background-color: rgba(128, 128, 128, 0.808);
+  border-radius: 10px;
+  cursor: pointer;
+  color: hsl(228, 19%, 98%);
+  padding: .66rem 1rem;
+  position: relative;
+}
+.card1 {
+  background-color: rgba(128, 128, 128, 0.808);
+  border-radius: 10px;
+  cursor: pointer;
+  color: hsl(228, 19%, 98%);
+  padding: .66rem 1rem;
+  position: relative;
+  width: 160vh;
+}
+
+.list__item + .list__item {
+  margin-top: .5rem;
+}
+
+.holder {
+  padding: 1rem 1.5rem;
+}
+
+.holder__title {
+  
+  font-size: large;
+  border-radius: var(--border-radius-500);
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem;
+}
+
+.holder--tint-2 .holder__title {
+  
+}
+
+.holder--tint-3 .holder__title {
+  background-image: linear-gradient(90deg, #fe8080 33%, #fea380 100%);
+}
+.dropdown-project{
+   padding: 10px;
+  height: 4.7vh;
+  width: 10.7%;
+  
+}
+
+/* .custom-scroll::-webkit-scrollbar {
     width: 8px;
   }
   
@@ -20,12 +110,7 @@
   overflow: auto;
  
 }
-.dropdown-project{
-   
-    height: 4.7vh;
-    width: 10.7%;
-    
-}
+
 
 .sprint-container{
     background-color: #d8cecedc;
@@ -59,4 +144,4 @@
 
 .dropdown-button{
     
-}
+} */
