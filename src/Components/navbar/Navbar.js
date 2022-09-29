@@ -13,7 +13,7 @@ function Navbar() {
       <div className="sidebar-main-div">
         <div style={{ color: "white" }}>
           <ul>
-        <li className="li-div"><NavLink exact activeClassName="active" to='/dashboard' >BOARD</NavLink></li>
+        <li className="li-div"><NavLink exact activeClassName="active" to='/dashboard'>BOARD</NavLink></li>
                 <li className="li-div" ><NavLink activeClassName="active" to='/backlog'>BACKLOGS </NavLink></li>
                 <li className="li-div"><NavLink activeClassName="active" to='/project'>PROJECT</NavLink></li>
                 </ul>

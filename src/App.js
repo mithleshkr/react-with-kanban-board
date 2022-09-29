@@ -7,6 +7,7 @@ import Navbar from './Components/navbar/Navbar';
 import Login from './Components/login/Login';
 import Backlogs from './Components/backlogs/Backlogs';
 import Project from './Components/project/Project';
+import Signup from './Components/registration/Signup';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <HashRouter>
         <Routes>
         <Route path='/' exact  element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
           <Route path='/dashboard'  element={<Dashboard />} />
           <Route path='/header'  element={<Header />} />
           <Route path='/nav'  element={<Navbar />} />

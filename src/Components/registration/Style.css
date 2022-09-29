@@ -15,18 +15,17 @@
     justify-content: center;
     flex-direction: column;
 }
-.card{
-    display: flex;
-    flex-direction: column;
-    margin: 0px auto 24px;
-    width: 400px;
-    padding: 32px 40px;
-    background: rgb(255, 255, 255);
-    border-radius: 6px;
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
-    box-sizing: border-box;
-    color: rgb(94, 108, 132);
-    margin-top: 45px;
+.card-signup-form{
+    position: absolute;
+  top: 40%;
+  left: 48%;
+  transform: translate(-40%, -40%);
+  height: 44vh;
+  display: block;
+  background-color: white;
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
     
 }
 .login-button{
@@ -60,7 +59,8 @@
 }
 .main-div{
     height: 100vh;
-    background-image:url(https://ingeniouspe.com/assets/img/pageheads/consult04.jpg);
+    background-image: url(../login/background2.png);
+    /* background-image:url(https://ingeniouspe.com/assets/img/pageheads/consult04.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

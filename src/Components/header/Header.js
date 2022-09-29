@@ -12,6 +12,8 @@ import Popover from '@mui/material/Popover';
 //react router
 import { useNavigate } from "react-router-dom";
 
+import taskMan from '../header/taskMan.png'
+
 const Header = () => {
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -39,12 +41,13 @@ const Header = () => {
         >
           <img
             style={{ marginRight: "15px" }}
-            width="60px"
-            height="50px"
-            src="https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png"
+            width="250px"
+            height="155px"
+            src={taskMan}
+            // src="https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png"
             alt=""
           />
-          <h2 style={{ color: "white" }}>iTaskManagement</h2>
+          {/* <h2 style={{ color: "white" }}>iTaskManagement</h2> */}
         </div>
 
         <div style={{ display: "flex", width: "6%", alignItems: "center" }}>

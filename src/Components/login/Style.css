@@ -1,4 +1,106 @@
 * {
+  margin: 0;
+  padding: 0;
+}
+.login-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  height: 30vh;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.card-login-form {
+  position: absolute;
+  top: 40%;
+  left: 48%;
+  transform: translate(-40%, -40%);
+  height: 44vh;
+  display: block;
+  background-color: white;
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+  
+  
+
+  /* display: flex;
+    flex-direction: column;
+    margin: 0px auto 24px;
+    width: 400px;
+    padding: 32px 40px;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
+    box-sizing: border-box;
+    color: rgb(94, 108, 132); */
+}
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.other-signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.input-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.other-signin-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.g-button {
+  box-shadow: rgb(0 0 0 / 20%) 0px 10px 10px;
+}
+.main-div {
+  height: 100vh;
+  background-image: url(../login/background2.png);
+   /* background-image:url(https://ingeniouspe.com/assets/img/pageheads/consult04.jpg);  */
+   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+  
+ 
+  
+}
+.signup-div {
+  color: blue;
+  cursor: pointer;
+}
+.login-form {
+  display: block;
+    
+  /* width: 300px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -40%); */
+}
+.login-form-forgot {
+  float: right;
+}
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+.login-form-button {
+  width: 100%;
+}
+
+/* * {
     margin: 0;
     padding: 0;
   }
@@ -21,7 +123,7 @@
     left: 48%;
     transform: translate(-40%, -40%);
     height: 42vh;
-    
+     */
   
     /* display: flex;
       flex-direction: column;
@@ -33,7 +135,7 @@
       box-shadow: rgb(0 0 0 / 20%) 0px 0px 10px;
       box-sizing: border-box;
       color: rgb(94, 108, 132); */
-  }
+  /* }
   .login-button {
     display: flex;
     align-items: center;
@@ -75,14 +177,14 @@
     cursor: pointer;
   }
   .login-form {
-    display: block;
+    display: block; */
       
     /* width: 300px;
     position: fixed;
     top: 40%;
     left: 50%;
     transform: translate(-40%, -40%); */
-  }
+  /* }
   .login-form-forgot {
     float: right;
   }
@@ -92,4 +194,4 @@
   .login-form-button {
     width: 100%;
   }
-  
+   */

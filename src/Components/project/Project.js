@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import Navbar from "../navbar/Navbar";
 import "./project.css";
-import { Button, Dropdown, Menu, Avatar } from "antd";
+import { Button, Dropdown, Menu, Avatar, Modal, Form, Input,Upload } from "antd";
+import { PlusOutlined } from '@ant-design/icons';
 import AddIcon from "@mui/icons-material/Add";
 
 //menu for project dropdown
@@ -30,6 +31,24 @@ const menu = (
 );
 
 const Project = () => {
+
+  const [projectName, setProjectName] = useState("");
+  const [leadName, setLeadName] = useState("");
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <Header />
@@ -59,9 +78,47 @@ const Project = () => {
               </Dropdown>
             </div>
             <div>
-              <Button type="primary" title="Create New Project">
+              <Button
+                type="primary"
+                title="Create New Project"
+                onClick={showModal}
+              >
                 <AddIcon />
               </Button>
+              <Modal
+                title="Project Details"
+                open={isModalOpen}
+                onOk={handleOk}
+                onCancel={handleCancel}
+              >
+              <Form
+             
+            >
+              <Form.Item label="Project Name">
+                <Input
+                 placeholder="Enter Your Project Name" 
+                 value={projectName}
+                 />
+              </Form.Item>
+              <Form.Item label="Lead Name">
+                <Input placeholder="Enter Lead Name" />
+              </Form.Item>
+              <Form.Item label="Upload" valuePropName="fileList">
+                <Upload action="/upload.do" listType="picture-card">
+                  <div>
+                    <PlusOutlined />
+                    <div
+                      style={{
+                        marginTop: 8,
+                      }}
+                    >
+                      Upload Project Profile
+                    </div>
+                  </div>
+                </Upload>
+              </Form.Item>
+            </Form>
+              </Modal>
             </div>
           </div>
           <br />
