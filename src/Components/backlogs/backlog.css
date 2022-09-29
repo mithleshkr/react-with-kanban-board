@@ -38,22 +38,22 @@
 .list__item {
 }
 
-.card {
+/* .card {
   background-color: rgba(128, 128, 128, 0.808);
   border-radius: 10px;
   cursor: pointer;
   color: hsl(228, 19%, 98%);
   padding: .66rem 1rem;
   position: relative;
-}
+} */
 .card1 {
-  background-color: rgba(128, 128, 128, 0.808);
+  background-color: #bdb7b7;
   border-radius: 10px;
   cursor: pointer;
-  color: hsl(228, 19%, 98%);
+  color: black;
   padding: .66rem 1rem;
   position: relative;
-  width: 160vh;
+  width: 155vh;
 }
 
 .list__item + .list__item {
@@ -61,6 +61,10 @@
 }
 
 .holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  
   padding: 1rem 1.5rem;
 }
 
@@ -86,6 +90,28 @@
   height: 4.7vh;
   width: 10.7%;
   
+}
+.holder__content{
+  background-color: rgba(187, 185, 185, 0.247);
+    height: 40vh;
+    border-radius: 10px;
+    overflow: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  border: 1px solid gray;
 }
 
 /* .custom-scroll::-webkit-scrollbar {

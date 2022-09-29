@@ -1,13 +1,26 @@
 import React, { useEffect, useState } from "react";
-import "./backlog.css";
+
+//react beautiful darg and drop c
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
+
+//header
 import Header from "../header/Header";
+
+//navigation bar
 import Navbar from "../navbar/Navbar";
+
+//ant design
 import { Button, Dropdown, Menu } from "antd";
 
-// const { useEffect, useState, } = React;
-// const { DragDropContext, Draggable, Droppable } = ReactBeautifulDnd;
+//material ui icons
+//import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
+//import PerfectScrollbar from 'react-perfect-scrollbar'
+
+//css
+import "./backlog.css";
+
+//menu for project dropdown
 const menu = (
   <Menu
     items={[
@@ -15,7 +28,7 @@ const menu = (
         key: "1",
         label: (
           <a rel="noopener noreferrer" href="/#/dashboard">
-            1st Project
+            iTaskManagement
           </a>
         ),
       },
@@ -23,15 +36,7 @@ const menu = (
         key: "2",
         label: (
           <a rel="noopener noreferrer" href="/#/dashboard">
-            2nd Project
-          </a>
-        ),
-      },
-      {
-        key: "3",
-        label: (
-          <a rel="noopener noreferrer" href="/#/dashboard">
-            3rd Project
+            iWardRobe
           </a>
         ),
       },
@@ -39,6 +44,7 @@ const menu = (
   />
 );
 
+//data of sprint and backlog tasks
 const DATA = [
   {
     id: "bl1",
@@ -48,6 +54,7 @@ const DATA = [
       { id: "sp2", label: "Task 2" },
       { id: "sp3", label: "Task 3" },
       { id: "sp4", label: "Task 7" },
+      { id: "sp5", label: "Task 9" },
     ],
     tint: 1,
   },
@@ -59,6 +66,7 @@ const DATA = [
       { id: "bt2", label: "Task 5" },
       { id: "bt3", label: "Task 6" },
       { id: "bt4", label: "Task 8" },
+      { id: "bt5", label: "Task 10" },
     ],
     tint: 2,
   },
@@ -81,15 +89,27 @@ function Backlogs() {
           <Navbar />
         </div>
 
-        <div className="layout__wrapper">
+        <div className="layout__wrapper custom-scroll">
           <div className="dropdown-project">
             <Dropdown overlay={menu} placement="bottomRight" arrow>
-              <Button className="dropdown-button">Select Project v</Button>
+              <Button className="dropdown-button">
+                Select Project &nbsp;
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-menu-down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M7.646.146a.5.5 0 0 1 .708 0L10.207 2H14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3.793L7.646.146zM1 7v3h14V7H1zm14-1V4a1 1 0 0 0-1-1h-3.793a1 1 0 0 1-.707-.293L8 1.207l-1.5 1.5A1 1 0 0 1 5.793 3H2a1 1 0 0 0-1 1v2h14zm0 5H1v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2zM2 4.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z" />
+                  </svg>
+                </span>{" "}
+              </Button>
             </Dropdown>
           </div>
-          <div className="layout__header">
-            <div className="app-bar"></div>
-          </div>
+          
           <LeadsOverview />
         </div>
       </div>
@@ -203,9 +223,11 @@ function DroppableList({ id, items, label, tint }) {
     <Droppable droppableId={id}>
       {(provided) => (
         <div {...provided.droppableProps} ref={provided.innerRef}>
+        
           <div className={`holder holder--tint-${tint}`}>
             <div className="holder__title">{label}</div>
-            <div className="holder__content">
+            
+            <div className="holder__content custom-scroll">
               <ul className="list">
                 {items.map((item, index) => (
                   <li className="list__item" key={item.id}>
@@ -226,7 +248,9 @@ function DroppableList({ id, items, label, tint }) {
                 {provided.placeholder}
               </ul>
             </div>
+           
           </div>
+          
         </div>
       )}
     </Droppable>
